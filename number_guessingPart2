@@ -1,0 +1,43 @@
+import random
+
+print("\n \n Welcome to number guessing game part two !! \n \n ")
+
+top_of_range = input("Enter a number to choose the range(0 to n) : \n")
+
+if top_of_range.isdigit() :
+    top_of_range = int(top_of_range)
+
+    if top_of_range <= 0 :
+        print("\n Please enter number larger than 0  !! \n")
+        quit()   
+else :
+    print("Please enter a valid number !! \n")
+    quit()
+
+random_number = random.randint(0, top_of_range)
+guesses = 0
+
+while True:
+    guesses += 1
+    user_guess = input("\n make a guess: ")
+    if user_guess.isdigit() :
+        user_guess = int(user_guess)
+
+    else :
+        print("\n \n Enter a valid number !! \n")
+        continue
+
+    if user_guess == random_number :
+        print("\n you got it !! \n \n ")
+        break
+    
+    elif user_guess < random_number :
+        print("\n go higher !! ")
+        continue
+
+    elif user_guess > random_number :
+        print("\n go lower !! ")
+        continue
+
+print("You got it in" , guesses, "guesses !! \n \n")
+
