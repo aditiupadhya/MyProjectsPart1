@@ -1,0 +1,37 @@
+name = input("type your name: " )
+
+print("\nwelcome", name, "to this adventure \n ")
+
+answer = input("You are on a dirt road it had come to an end, you can go left or right. \nWhich way would you like to go? (left/right): ").lower()
+
+if answer == "left" :
+    answer = input("would you like to walk or swim. (swim/walk): ").lower()
+
+    if answer == "swim":
+        print("\nyou swam accros and were eaten by an aligator!")
+
+    elif answer == "walk":
+        print("\nyou walked for miles, ran out of water and you lost the game !")
+    
+    else :
+        print("\nnot a valid choice!!!")
+
+elif answer == "right" :
+    answer = input("\nYou come to a bridge it looks wobbly,\nDo you want to cross the bridge or go back?(cross/back): ").lower()
+
+    if answer == "back" :
+        print("\nYou go back and lose !!")
+    elif answer == "cross":
+        answer = input("\nYou met with a stranger.\nDo you talk to them?(yes/no): ").lower()
+
+        if answer == "yes":
+            print("\nYou talk to the stranger and give you GOLD! you WIN!!")
+        elif answer == "no":
+            print("\nYou ignore the stanger and they are offended and you lose !!")
+        else:
+            print("\nNot a valid choice !!")
+
+else:
+     print("\nnot a valid choice")   
+
+print("thankyou for trying", name, "\n") 
